@@ -1,7 +1,7 @@
 {
-  "variant" : {
+  "variants" : {
     "": {
-      "model": "tutorialmod:block/sapphire_block"
+      "model": "hello_world:block/sapphire_block"
     }
   }
 }
