@@ -1,0 +1,11 @@
+{
+  "item.hello_world.sapphire": "Sapphire",
+  "item.hello_world.raw_sapphire": "Raw Sapphire",
+  "item.hello_world.java_seed": "Java Seed",
+  "item.hello_world.java_cup": "Java Cup",
+
+  "block.hello_world.sapphire_block": "Block of Sapphire",
+  "block.hello_world.raw_sapphire_block": "Raw Block of Sapphire",
+
+  "creativetab.helloworld_tab" : "Hello World Tab"
+}

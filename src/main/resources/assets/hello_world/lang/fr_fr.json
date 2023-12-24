@@ -1,0 +1,11 @@
+{
+  "item.hello_world.sapphire": "Saphir",
+  "item.hello_world.raw_sapphire": "Saphir brut",
+  "item.hello_world.java_seed": "Graine de Java",
+  "item.hello_world.java_cup": "Tasse de Java ",
+
+  "block.hello_world.sapphire_block": "Bloc de Saphir",
+  "block.hello_world.raw_sapphire_block": "Bloc de Saphir brut",
+
+  "creativetab.helloworld_tab" : "Hello World"
+}
