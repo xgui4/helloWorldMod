@@ -1,0 +1,10 @@
+{
+  "values": [
+    "hello_world:sapphire_block",
+    "hello_world:raw_sapphire_block",
+    "hello_world:sapphire_ore",
+    "hello_world:deepslate_sapphire_ore",
+    "hello_world:nether_sapphire_ore",
+    "hello_world:end_stone_sapphire_ore"
+  ]
+}

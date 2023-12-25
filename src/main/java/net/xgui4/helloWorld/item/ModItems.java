@@ -6,6 +6,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xgui4.helloWorld.TutorialMod;
+import net.xgui4.helloWorld.item.custom.MetalDetectorItem;
+import net.xgui4.helloWorld.item.custom.Terminal;
 
 import java.awt.event.InputEvent;
 
@@ -22,6 +24,13 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> JAVA_CUP = ITEMS.register("java_cup",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> TERMINAL = ITEMS.register("terminal",
+            () -> new Terminal(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
