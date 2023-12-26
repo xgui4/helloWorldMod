@@ -20,9 +20,7 @@ public class Terminal extends Item {
         if (!pContext.getLevel().isClientSide()) {
             assert player != null;
             String msg = RandomString();
-            String event = RandomEvent();
-
-            player.sendSystemMessage((Component.literal(event));
+            RandomEvent();
             player.sendSystemMessage((Component.literal(msg)));
 
         }
