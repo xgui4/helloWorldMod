@@ -20,7 +20,11 @@ public class Terminal extends Item {
         if (!pContext.getLevel().isClientSide()) {
             assert player != null;
             String msg = RandomString();
-            RandomEvent();
+            String[] events = RandomEvent();
+            for (int i = 0; i < events.length; i++)
+            {
+                player.sendSystemMessage((Component.literal(events[i])));
+            }
             player.sendSystemMessage((Component.literal(msg)));
 
         }
@@ -42,7 +46,7 @@ public class Terminal extends Item {
         // Renvoyer l'élément du tableau correspondant à l'indice aléatoire
         return strings[index];
     }
-    private static void RandomEvent(){
+    private static String[] RandomEvent(){
         // Créer un tableau de chaînes
         String[] strings = {
                 "Day/Night Cycle",
@@ -50,5 +54,6 @@ public class Terminal extends Item {
                 "Anvil Trap",
                 "Hello_World"
         };
+        return strings;
     }
     }

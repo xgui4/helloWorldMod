@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hello_world:block/end_stone_sapphire_ore"
+    }
+  }
+}

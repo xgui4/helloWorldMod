@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hello_world:block/nether_sapphire_ore"
+    }
+  }
+}
