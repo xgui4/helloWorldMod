@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all" : "hello_world:block/java_block"
+    "all": "hello_world:block/java_block"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "key": {
+      "X": {
+        "item": "hello_world:sapphire"
+      }
+    },
+    "result": {
+      "item": "hello_world:terminal"
+    }
+  }
+}

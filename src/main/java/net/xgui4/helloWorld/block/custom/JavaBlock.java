@@ -7,11 +7,16 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Random;
 
 public class JavaBlock extends Block {
@@ -43,5 +48,11 @@ public class JavaBlock extends Block {
         int index = random.nextInt(strings.length);
         // Renvoyer l'élément du tableau correspondant à l'indice aléatoire
         return strings[index];
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+        pTooltip.add(Component.translatable("tooltip.hello_world.terminal.tooltip"));
+        super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 }

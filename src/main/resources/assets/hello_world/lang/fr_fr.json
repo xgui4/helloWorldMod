@@ -5,6 +5,8 @@
   "item.hello_world.java_cup": "Tasse de Java ",
   "item.hello_world.metal_detector": "Détecteur de métal",
   "item.hello_world.terminal": "Terminal (WIP)",
+  "item.hello_world.strawberry": "Fraise",
+  "item.hello_world.pine_cone": "Cône de pin",
 
   "block.hello_world.sapphire_block": "Bloc de Saphir",
   "block.hello_world.raw_sapphire_block": "Bloc de Saphir brut",
@@ -15,6 +17,10 @@
   "block.hello_world.deepslate_sapphire_ore": "Minerai de saphir Deepslate",
   "block.hello_world.nether_sapphire_ore": "Minerai de saphir du Néant",
   "block.hello_world.end_stone_sapphire_ore": "Minerai de saphir de pierre de fin",
-  "Block.hello_world.sound_block": "Bloc de son",
-  "Block.hello_world.java_block": "Bloc de Java"
+  "block.hello_world.sound_block": "Bloc de son",
+  "block.hello_world.java_block": "Bloc de Java",
+
+  "tooltip.hello_world.metal_detector.tooltip": "Cette item détecte certains minerais comme du fer",
+  "tooltip.hello_world.terminal.tooltip": "Cette objet expérimental génère des évènement aléatoire",
+  "tooltip.hello_world.music.tooltip": "Cet objet expérimental génère de douces notes musicales"
 }

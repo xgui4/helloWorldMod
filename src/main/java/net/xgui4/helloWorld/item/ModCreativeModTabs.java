@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.xgui4.helloWorld.TutorialMod;
 import net.xgui4.helloWorld.block.ModBlocks;
+import net.xgui4.helloWorld.item.ModItems;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -25,6 +26,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.JAVA_SEED.get());
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.TERMINAL.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.PINE_CONE.get());
+
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());

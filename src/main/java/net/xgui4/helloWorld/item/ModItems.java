@@ -6,10 +6,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xgui4.helloWorld.TutorialMod;
+import net.xgui4.helloWorld.item.ModFoods;
+import net.xgui4.helloWorld.item.custom.FuelItem;
 import net.xgui4.helloWorld.item.custom.MetalDetectorItem;
 import net.xgui4.helloWorld.item.custom.Terminal;
-
-import java.awt.event.InputEvent;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -19,6 +19,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+            () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
+            () -> new FuelItem(new Item.Properties(), 600));
 
     public static final RegistryObject<Item> JAVA_SEED = ITEMS.register("java_seed",
             () -> new Item(new Item.Properties()));

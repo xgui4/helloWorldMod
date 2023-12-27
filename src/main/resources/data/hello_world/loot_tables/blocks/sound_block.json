@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "hello_world:java_block"
+              "name": "hello_world:sound_block"
             },
             {
               "type": "minecraft:item",
@@ -47,7 +47,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "hello_world:java_block"
+              "name": "hello_world:sound_block"
             }
           ]
         }
@@ -55,5 +55,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hello_world:blocks/java_block"
+  "random_sequence": "hello_world:blocks/sound_block"
 }

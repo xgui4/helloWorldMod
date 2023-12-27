@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category" : "misc",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "   ",
+    " # ",
+    "   "
   ],
   "key": {
     "#" : {
@@ -12,7 +12,8 @@
     }
   },
   "result": {
-    "result": 3,
-    "item" : "hello_world:java_block"
+    "count": 1,
+    "item" : "hello_world:java_block",
+    "show_notification" : true
   }
 }

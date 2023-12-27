@@ -5,6 +5,8 @@
   "item.hello_world.java_cup": "Java Cup",
   "item.hello_world.metal_detector": "Metal Detector",
   "item.hello_world.terminal": "Terminal (WIP)",
+  "item.hello_world.strawberry": "Strawberry",
+  "item.hello_world.pine_cone": "Pine Cone",
 
   "block.hello_world.sapphire_block": "Block of Sapphire",
   "block.hello_world.raw_sapphire_block": "Raw Block of Sapphire",
@@ -15,6 +17,11 @@
   "block.hello_world.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.hello_world.nether_sapphire_ore": "Nether Sapphire Ore",
   "block.hello_world.end_stone_sapphire_ore": "End Stone Sapphire Ore",
-  "Block.hello_world.sound_block": "Sound Block",
-  "Block.hello_world.java_block": "Java Block"
+  "block.hello_world.sound_block": "Sound Block",
+  "block.hello_world.java_block": "Java Block",
+
+  "tooltip.hello_world.metal_detector.tooltip": "This item detects certain minerals like iron",
+  "tooltip.hello_world.terminal.tooltip": "This experimental object generates random events",
+  "tooltip.hello_world.music.tooltip": "This experimental object generates sweet muscials notes",
+
 }
