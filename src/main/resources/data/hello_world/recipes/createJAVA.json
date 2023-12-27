@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category" : "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#" : {
+      "item": "hello_world:java_cup"
+    }
+  },
+  "result": {
+    "result": 3,
+    "item" : "hello_world:java_block"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "pack": {
     "description": {
-      "text": "${mod_id} resources"
+      "text": "Les ressources du Mod \"The Hello World Mod\""
     },
     "pack_format": 15
   }

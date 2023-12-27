@@ -1,11 +1,21 @@
 package net.xgui4.helloWorld.item.custom;
 
-import net.minecraft.client.telemetry.events.WorldLoadEvent;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.AnvilBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+
 import java.util.Random;
 
 
@@ -17,43 +27,38 @@ public class Terminal extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Player player = pContext.getPlayer();
-        if (!pContext.getLevel().isClientSide()) {
+        if (pContext.getLevel().isClientSide()) { // vérifier si le niveau est côté client
             assert player != null;
-            String msg = RandomString();
-            String[] events = RandomEvent();
-            for (int i = 0; i < events.length; i++)
-            {
-                player.sendSystemMessage((Component.literal(events[i])));
+            String event = RandomEvent();
+            if (event.equals("Random Sound")) {
+                pContext.getLevel().playSound(pContext.getPlayer(), pContext.getPlayer(), SoundEvents.VILLAGER_NO, SoundSource.PLAYERS, 10, 1.0F);
             }
-            player.sendSystemMessage((Component.literal(msg)));
-
+            if (event.equals("TNT Trap")) {
+                pContext.getLevel().explode(player,player.getX(),player.getY() + 1,player.getZ(),30, Level.ExplosionInteraction.TNT).finalizeExplosion(true);
+                pContext.getLevel().playSound(pContext.getPlayer(), pContext.getPlayer(), SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 10, 1.0F);
+            }
+            // Utiliser la méthode setBlockEntity() pour placer l'enclume flottante
+            if (event.equals("Anvil Trap")) {
+                pContext.getLevel().setBlockAndUpdate(new BlockPos((int) player.getX(), (int) (player.getY() + 20), (int) player.getZ()), Blocks.ANVIL.defaultBlockState());// Placer une enclume flottante à la position cliquée
+            }
+            if (event.equals("Hello World")) {
+                System.out.println("Hello World");
+            }
+            player.sendSystemMessage((Component.literal(event)));
         }
-        return InteractionResult.SUCCESS;
+        return super.useOn(pContext); // retourner le résultat de l'interaction
     }
-
-    private static String RandomString(){
+    private static String RandomEvent(){
         // Créer un tableau de chaînes
         String[] strings = {
-                "Hello World",
-                "Process finished with exit code -1",
-                "error at line 1 : publics static main(String[] args)",
-                "unclosed string literal"
-        };
-        // Créer un objet de la classe Random
-        Random random = new Random();
-        // Générer un nombre aléatoire entre 0 et la longueur du tableau - 1
-        int index = random.nextInt(strings.length);
-        // Renvoyer l'élément du tableau correspondant à l'indice aléatoire
-        return strings[index];
-    }
-    private static String[] RandomEvent(){
-        // Créer un tableau de chaînes
-        String[] strings = {
-                "Day/Night Cycle",
+                "Random Sound",
                 "TNT Trap",
                 "Anvil Trap",
                 "Hello_World"
         };
-        return strings;
+        Random random = new Random();
+        int index = random.nextInt(strings.length);
+        // Renvoyer l'élément du tableau correspondant à l'indice aléatoire
+        return strings[index];
     }
     }

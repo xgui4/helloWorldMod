@@ -5,15 +5,14 @@
   "item.hello_world.java_cup": "Tasse de Java",
   "item.hello_world.metal_detector": "Détecteur de métal",
   "item.hello_world.terminal": "Terminal (WIP)",
-
   "block.hello_world.sapphire_block": "Bloc de Saphir",
   "block.hello_world.raw_sapphire_block": "Bloc de Saphir brut",
-
-  "creativetab.helloworld_tab" : "Hello World",
+  "creativetab.helloworld_tab": "Hello World",
 
   "block.hello_world.sapphire_ore": "Minerai de saphir",
   "block.hello_world.deepslate_sapphire_ore": "Minerai de saphir Deepslate",
   "block.hello_world.nether_sapphire_ore": "Minerai de saphir du Néant",
   "block.hello_world.end_stone_sapphire_ore": "Minerai de saphir de pierre de fin",
-  "Block.hello_world.terminal": "Bloc de son"
+  "Block.hello_world.sound_block": "Bloc de son",
+  "Block.hello_world.java_block": "Bloc de Java"
 }
