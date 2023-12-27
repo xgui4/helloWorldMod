@@ -20,5 +20,9 @@
   "block.hello_world.java_block": "Bloc de Java",
 
   "tooltip.hello_world.terminal.tooltip": "Cette objet expérimental génère des évènement aléatoire",
-  "tooltip.hello_world.music.tooltip": "Cet objet expérimental génère de douces notes musicales"
+  "tooltip.hello_world.music.tooltip": "Cet objet expérimental génère de douces notes musicales",
+
+  "block.minecraft.command_block": "Bloc d'ordinateur",
+  "block.minecraft.chain_command_block": "Bornier distant",
+  "block.minecraft.repeating_command_block": "Bloc serveur"
 }

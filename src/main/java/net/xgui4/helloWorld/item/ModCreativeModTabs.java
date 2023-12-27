@@ -39,6 +39,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.JAVA_BLOCK.get());
 
                         pOutput.accept(Items.COMMAND_BLOCK);
+                        pOutput.accept(Items.CHAIN_COMMAND_BLOCK);
+                        pOutput.accept(Items.REPEATING_COMMAND_BLOCK);
                         pOutput.accept(Items.STRUCTURE_BLOCK);
                         pOutput.accept(Items.STRUCTURE_VOID);
                     })

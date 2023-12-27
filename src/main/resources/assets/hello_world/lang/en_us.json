@@ -22,6 +22,10 @@
 
   "tooltip.hello_world.metal_detector.tooltip": "This item detects certain minerals like iron",
   "tooltip.hello_world.terminal.tooltip": "This experimental object generates random events",
-  "tooltip.hello_world.music.tooltip": "This experimental object generates sweet muscials notes",
+  "tooltip.hello_world.music.tooltip": "This experimental object generates sweets musicals notes",
+
+  "block.minecraft.command_block": "Computer Block",
+  "block.minecraft.chain_command_block": "Remote Terminal Block",
+  "block.minecraft.repeating_command_block": "Server Block"
 
 }
