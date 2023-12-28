@@ -11,7 +11,8 @@
   "block.hello_world.sapphire_block": "Block of Sapphire",
   "block.hello_world.raw_sapphire_block": "Raw Block of Sapphire",
 
-  "creativetab.helloworld_tab" : "Hello World Tab",
+  "creativetab.helloworld_tab" : "Saphirres Tab",
+  "computer.helloworld_tab" : "Computers Tab",
 
   "block.hello_world.sapphire_ore": "Sapphire Ore",
   "block.hello_world.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
@@ -19,6 +20,7 @@
   "block.hello_world.end_stone_sapphire_ore": "End Stone Sapphire Ore",
   "block.hello_world.sound_block": "Sound Block",
   "block.hello_world.java_block": "Java Block",
+  "block.hello_world.computer_block": "Computer Block",
 
   "tooltip.hello_world.metal_detector.tooltip": "This item detects certain minerals like iron",
   "tooltip.hello_world.terminal.tooltip": "This experimental object generates random events",

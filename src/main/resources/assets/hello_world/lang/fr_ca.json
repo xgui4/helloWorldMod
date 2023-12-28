@@ -10,7 +10,9 @@
 
   "block.hello_world.sapphire_block": "Bloc de Saphir",
   "block.hello_world.raw_sapphire_block": "Bloc de Saphir brut",
-  "creativetab.helloworld_tab": "Hello World",
+
+  "creativetab.helloworld_tab": "Onglets Saphirs",
+  "computer.helloworld_tab" : "Onglets Ordinateurs",
 
   "block.hello_world.sapphire_ore": "Minerai de saphir",
   "block.hello_world.deepslate_sapphire_ore": "Minerai de saphir Deepslate",
