@@ -11,9 +11,9 @@
   "block.hello_world.sapphire_block": "Bloc de Saphir",
   "block.hello_world.raw_sapphire_block": "Bloc de Saphir brut",
 
-  "creativetab.helloworld_tab": "Onglets Saphirs",
+  "creativetab.helloworld_tab": "Onglets de Minerais",
   "computer.helloworld_tab" : "Onglets Ordinateurs",
-  "block.hello_world.computer_block": "Bloc d'ordinateur",
+  "block.hello_world.computer_block": "Bloc d'ordinateurs",
 
   "block.hello_world.sapphire_ore": "Minerai de saphir",
   "block.hello_world.deepslate_sapphire_ore": "Minerai de saphir Deepslate",
@@ -21,6 +21,8 @@
   "block.hello_world.end_stone_sapphire_ore": "Minerai de saphir de pierre de fin",
   "block.hello_world.sound_block": "Bloc de son",
   "block.hello_world.java_block": "Bloc de Java",
+  "block.hello_world.radium_ore_block": "Minerai de Radium",
+  "block.hello_world.radium_block": "Bloc de Radium",
 
   "tooltip.hello_world.metal_detector.tooltip": "Cette item détecte certains minerais comme du fer",
   "tooltip.hello_world.terminal.tooltip": "Cette objet expérimental génère des évènement aléatoire",
@@ -28,5 +30,6 @@
 
   "block.minecraft.command_block": "Bloc d'ordinateur",
   "block.minecraft.chain_command_block": "Bornier distant",
-  "block.minecraft.repeating_command_block": "Bloc serveur"
+  "block.minecraft.repeating_command_block": "Bloc serveur",
+  "block.hello_world.radium_ore_block": "Radium Ore"
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hello_world:block/radium_ore_block"
+    }
+  }
+}

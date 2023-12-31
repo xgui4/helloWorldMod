@@ -3,10 +3,7 @@ package net.xgui4.helloWorld.block;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,6 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xgui4.helloWorld.TutorialMod;
 import net.xgui4.helloWorld.block.custom.JavaBlock;
+import net.xgui4.helloWorld.block.custom.RadiumOreBlock;
 import net.xgui4.helloWorld.block.custom.SoundBlock;
 import net.xgui4.helloWorld.item.ModItems;
 
@@ -45,6 +43,11 @@ public class ModBlocks {
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> JAVA_BLOCK = registerBlock("java_block",
             () -> new JavaBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> RADIUM_ORE_BLOCK = registerBlock("radium_ore_block",
+            () -> new RadiumOreBlock(true, 5, BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE)));
+    public static final RegistryObject<Block> RADIUM_BLOCK = registerBlock("radium_block",
+            () -> new RadiumOreBlock(true, 5, BlockBehaviour.Properties.copy(Blocks.SOUL_CAMPFIRE)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

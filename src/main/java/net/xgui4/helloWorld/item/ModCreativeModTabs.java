@@ -15,7 +15,7 @@ import net.xgui4.helloWorld.item.ModItems;
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
-    public static final RegistryObject<CreativeModeTab> SAPHIRRE_TAB = CREATIVE_MODE_TABS.register("saphirre_tab",
+    public static final RegistryObject<CreativeModeTab> SAPHIRRE_TAB = CREATIVE_MODE_TABS.register("ore_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.helloworld_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -26,6 +26,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.PINE_CONE.get());
+                        pOutput.accept(ModItems.RAW_RADIUM.get());
 
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
@@ -33,6 +34,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModBlocks.RADIUM_ORE_BLOCK.get());
+                        pOutput.accept(ModBlocks.RADIUM_BLOCK.get());
                     })
                     .build());
 
