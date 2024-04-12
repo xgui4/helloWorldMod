@@ -39,8 +39,8 @@ public class ModCreativeModTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> COMPUTERS_TAB = CREATIVE_MODE_TABS.register("helloworld_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.COMMAND_BLOCK))
+    public static final RegistryObject<CreativeModeTab> PROGRAMMING = CREATIVE_MODE_TABS.register("programming_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CSHARP.get()))
                     .title(Component.translatable("computer.helloworld_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.JAVA_CUP.get());
@@ -48,6 +48,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.TERMINAL.get());
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                         pOutput.accept(ModBlocks.JAVA_BLOCK.get());
+                        pOutput.accept(ModItems.CSHARP.get());
 
                         pOutput.accept(Items.COMMAND_BLOCK);
                         pOutput.accept(Items.CHAIN_COMMAND_BLOCK);

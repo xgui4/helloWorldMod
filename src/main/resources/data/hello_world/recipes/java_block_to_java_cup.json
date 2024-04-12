@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hello_world:java_block"
+    }
+  ],
+  "result": {
+    "item": "hello_world:java_cup",
+    "count" : 9
+  }
+}

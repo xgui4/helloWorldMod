@@ -37,6 +37,9 @@ public class ModItems {
     public static final RegistryObject<Item> TERMINAL = ITEMS.register("terminal",
             () -> new Terminal(new Item.Properties()));
 
+    public static final RegistryObject<Item> CSHARP = ITEMS.register("csharp",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

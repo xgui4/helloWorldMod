@@ -11,6 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xgui4.helloWorld.TutorialMod;
 import net.xgui4.helloWorld.block.custom.JavaBlock;
+import net.xgui4.helloWorld.block.custom.RadiumBlock;
 import net.xgui4.helloWorld.block.custom.RadiumOreBlock;
 import net.xgui4.helloWorld.block.custom.SoundBlock;
 import net.xgui4.helloWorld.item.ModItems;
@@ -43,10 +44,11 @@ public class ModBlocks {
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> JAVA_BLOCK = registerBlock("java_block",
             () -> new JavaBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final RegistryObject<Block> RADIUM_ORE_BLOCK = registerBlock("radium_ore_block",
-            () -> new RadiumOreBlock(true, 5, BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE)));
+
+     public static final RegistryObject<Block> RADIUM_ORE_BLOCK = registerBlock("radium_ore_block",
+             () -> new RadiumOreBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> RADIUM_BLOCK = registerBlock("radium_block",
-            () -> new RadiumOreBlock(true, 5, BlockBehaviour.Properties.copy(Blocks.SOUL_CAMPFIRE)));
+            () -> new RadiumBlock(true, 5, BlockBehaviour.Properties.copy(Blocks.SOUL_CAMPFIRE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

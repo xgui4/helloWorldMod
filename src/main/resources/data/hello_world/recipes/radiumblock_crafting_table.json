@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category" : "misc",
   "pattern": [
-    "   ",
-    " # ",
-    "   "
+    "###",
+    "###",
+    "###"
   ],
   "key": {
     "#" : {
-      "item": "hello_world:java_seed"
+      "item": "hello_world:raw_radium"
     }
   },
   "result": {
-  "item" : "hello_world:java_cup"
-}
+    "item" : "hello_world:radium_block"
+  }
 }

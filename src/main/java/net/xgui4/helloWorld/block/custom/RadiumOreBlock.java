@@ -1,63 +1,72 @@
 package net.xgui4.helloWorld.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.DustColorTransitionOptions;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraftforge.client.event.RenderTooltipEvent;
-import net.minecraftforge.eventbus.api.Event;
-
-import java.awt.*;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class RadiumOreBlock extends Block {
-    public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    public static final BooleanProperty SIGNAL_FIRE = BlockStateProperties.SIGNAL_FIRE;
-    private final boolean spawnParticles;
-    private final int fireDamage;
 
-    public RadiumOreBlock(boolean pSpawnParticles, int pFireDamage, BlockBehaviour.Properties pProperties) {
+    public RadiumOreBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
-        this.spawnParticles = pSpawnParticles;
-        this.fireDamage = pFireDamage;
-    }
-    public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {{
-            pEntity.hurt(pLevel.damageSources().inFire(), (float)this.fireDamage);
-        }
-        super.entityInside(pState, pLevel, pPos, pEntity);
-    }
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-            if (pRandom.nextInt(10) == 0) {
-                pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.FIRE_AMBIENT, SoundSource.BLOCKS, 0.5F + pRandom.nextFloat(), pRandom.nextFloat() * 0.7F + 0.6F, false);
-            }
-            if (this.spawnParticles && pRandom.nextInt(5) == 0) {
-                for(int i = 0; i < pRandom.nextInt(1) + 1; ++i) {
-                    pLevel.addParticle(ParticleTypes.SOUL_FIRE_FLAME, (double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, (double)(pRandom.nextFloat() / 2.0F), 5.0E-5D, (double)(pRandom.nextFloat() / 2.0F));
-                    makeParticles(pLevel, pPos, true);
-                }
-            }
     }
 
-    public static void makeParticles(Level pLevel, BlockPos pPos, boolean pIsSignalFire) {
-        RandomSource randomsource = pLevel.getRandom();
-        SimpleParticleType simpleparticletype = pIsSignalFire ? ParticleTypes.SONIC_BOOM: ParticleTypes.SMOKE;
-        pLevel.addAlwaysVisibleParticle(simpleparticletype, true, (double)pPos.getX() + 0.5D + randomsource.nextDouble() / 3.0D * (double)(randomsource.nextBoolean() ? 1 : -1), (double)pPos.getY() + randomsource.nextDouble() + randomsource.nextDouble(), (double)pPos.getZ() + 0.5D + randomsource.nextDouble() / 3.0D * (double)(randomsource.nextBoolean() ? 1 : -1), 0.0D, 0.07D, 0.0D);
-        pLevel.addParticle(ParticleTypes.SQUID_INK, (double)pPos.getX() + 0.5D + randomsource.nextDouble() / 4.0D * (double)(randomsource.nextBoolean() ? 1 : -1), (double)pPos.getY() + 0.4D, (double)pPos.getZ() + 0.5D + randomsource.nextDouble() / 4.0D * (double)(randomsource.nextBoolean() ? 1 : -1), 0.0D, 0.005D, 0.0D);
+
+
+    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+        if (pLevel.isClientSide) {
+            spawnParticles(pLevel, pPos);
+        }
+        ItemStack itemstack = pPlayer.getItemInHand(pHand);
+        return itemstack.getItem() instanceof BlockItem && (new BlockPlaceContext(pPlayer, pHand, itemstack, pHit)).canPlace() ? InteractionResult.PASS : InteractionResult.SUCCESS;
     }
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(LIT, SIGNAL_FIRE);
+
+    /**
+     * Perform side-effects from block dropping, such as creating silverfish
+     */
+    public void spawnAfterBreak(BlockState pState, ServerLevel pLevel, BlockPos pPos, ItemStack pStack, boolean pDropExperience) {
+        super.spawnAfterBreak(pState, pLevel, pPos, pStack, pDropExperience);
+    }
+
+    @Override
+    public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader world, RandomSource randomSource, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? 1 + randomSource.nextInt(20) : 0;
+    }
+
+    /**
+     * Called periodically clientside on blocks near the player to show effects (like furnace fire particles).
+     */
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+            spawnParticles(pLevel, pPos);
+    }
+
+    private static void spawnParticles(Level pLevel, BlockPos pPos) {
+        double d0 = 0.5625D;
+        RandomSource randomsource = pLevel.random;
+
+        for(Direction direction : Direction.values()) {
+            BlockPos blockpos = pPos.relative(direction);
+            if (!pLevel.getBlockState(blockpos).isSolidRender(pLevel, blockpos)) {
+                Direction.Axis direction$axis = direction.getAxis();
+                double d1 = direction$axis == Direction.Axis.X ? 1.5D + 1.5625D * (double)direction.getStepX() : (double)randomsource.nextFloat();
+                double d2 = direction$axis == Direction.Axis.Y ? 1.5D + 1.5625D * (double)direction.getStepY() : (double)randomsource.nextFloat();
+                double d3 = direction$axis == Direction.Axis.Z ? 1.5D + 1.5625D * (double)direction.getStepZ() : (double)randomsource.nextFloat();
+                pLevel.addParticle(ParticleTypes.GLOW_SQUID_INK, (double)pPos.getX() + d1, (double)pPos.getY() + d2, (double)pPos.getZ() + d3, 0.0D, 0.0D, 0.0D);
+            }
+        }
+
     }
 
 }

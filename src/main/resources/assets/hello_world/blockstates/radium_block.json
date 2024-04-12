@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/emerald_block"
+      "model": "hello_world:block/radium_block"
     }
   }
 }

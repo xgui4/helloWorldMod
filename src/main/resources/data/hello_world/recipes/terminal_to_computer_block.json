@@ -8,10 +8,10 @@
   ],
   "key": {
     "#" : {
-      "item": "hello_world:java_cup"
+      "item": "hello_world:terminal"
     }
   },
   "result": {
-    "item" : "hello_world:java_block"
+    "item" : "minecraft:command_block"
   }
 }

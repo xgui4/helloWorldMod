@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hello_world:radium_block"
+    }
+  ],
+  "result": {
+    "item": "hello_world:raw_radium",
+    "count" : 9
+  }
+}

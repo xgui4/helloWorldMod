@@ -2,7 +2,7 @@
 
 §3I see the player you mean to be.
 
-§2PLAYERNAME?
+§2PLAYERNAME? Score : SCORE!
 
 §3Yes. Take care. It has reached a higher level now. It can read our thoughts.
 

@@ -10,13 +10,11 @@
     "#": {
       "item": "minecraft:netherite_ingot"
     },
-    "key": {
-      "X": {
-        "item": "hello_world:sapphire"
-      }
-    },
+    "X": {
+      "item": "hello_world:sapphire"
+    }
+  },
     "result": {
       "item": "hello_world:terminal"
     }
   }
-}

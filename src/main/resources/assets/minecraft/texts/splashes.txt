@@ -1,3 +1,4 @@
+01000100 01101111 01101110 01110100 00100000 01101100 01101111 01101111 01101011 00100000 01100001 01110100 00100000 01110100 01101000 01100101 00100000 01100101 01100011 01101100 01101001 01110011 01110000 01100101 00100000 01100100 01101001 01110010 01100101 01100011 01110100 01101100 01111001
 1001000 1100101 1101100 1101100 1101111 100000 1010111 1101111 1110010 1101100 1100100 101110
 As seen on TV!
 Awesome!
@@ -30,16 +31,13 @@ Keyboard compatible!
 Ingots!
 Exploding creepers!
 That's no moon!
-l33t!
 Create!
 Survive!
 Dungeon!
 Exclusive!
 The bee's knees!
-Closed source!
 Classy!
 Wow!
-Not on steam!
 Oh man!
 Awesome community!
 Pixels!
@@ -120,7 +118,7 @@ Falling off cliffs!
 150% hyperbole!
 Synecdoche!
 Let's danec!
-Seecret Friday update!
+Seecret Friday update! Are no more :(
 Reference implementation!
 Kiss the sky!
 20 GOTO 10!
@@ -226,7 +224,7 @@ DungeonQuest is unfair!
 90210!
 Check out the far lands!
 Tyrion would love it!
-Also try VVVVVV!
+Also try Minecraft Bedrock!
 Also try Super Meat Boy!
 Also try Terraria!
 Also try Mount And Blade!
@@ -301,7 +299,7 @@ Put that cookie down!
 Pretty scary!
 I have a suggestion.
 Now with extra hugs!
-Java 16 + 1 = 17!
+"Java 16" + "1" = "Java 161"
 Woah.
 HURNERJSGER?
 What's up, Doc?
@@ -331,9 +329,9 @@ Take an eggbeater and beat it against a skillet!
 Make me a table, a funky table!
 Take the elevator to the mezzanine!
 Stop being reasonable, this is the Internet!
-/give @a hugs 64
+/give @e hugs infinite
 This is good for Realms.
-Any computer is a laptop if you're brave enough!
+Any computer is a (lap)top if you're brave enough!
 Do it all, everything!
 Where there is not light, there can spider!
 GNU Terry Pratchett
@@ -345,7 +343,7 @@ Throw yourself at the ground and miss
 Rule #1: it's never my fault
 Replaced molten cheese with blood?
 Absolutely fixed relatively broken coordinates
-Boats FTW
+Elytra FTW!
 Javalicious edition
 Should not be played while driving
 You're going too fast!
@@ -354,7 +352,7 @@ The true meaning of covfefe
 An illusion! What are you hiding?
 Something's not quite right...
 Thank you for the fish!
-All rumors are true!
+All rumors are (not) true!
 Truly gone fishing!
 Rainbow turtle?
 Something funny!
@@ -374,7 +372,8 @@ Ph1lza had a good run!
 Ping the human!
 In case it isn't obvious, foxes aren't players.
 Buzzy Bees!
-Minecraft Java Edition presents: Disgusting Bugs
+Minecraft : Java Edition presents: Disgusting Bugs
+NullPointerException
 Wash your hands!
 Soap and water!
 Support local businesses!
@@ -382,7 +381,6 @@ Stay home and play games!
 Stay safe!
 Stay strong!
 Cough or sneeze into your elbow!
-Don’t touch your face!
 Support elderly relatives and friends!
 Prepare, but don’t hoard!
 Gamers unite – separately in your own homes!
@@ -402,19 +400,15 @@ Aww man!
 And my pickaxe!
 Envision! Create! Share!
 Fabulous graphics!
-Also try Minecraft Dungeons!
+Minecraft Dungeons Now Cancelled!
 Vanilla!
 May contain traces of citrus!
 Zoglin!?
 Black lives matter!
 Be anti-racist!
 Learn about allyship!
-Speak OUT against injustice and UP for equality!
-Amplify and listen to BIPOC voices!
 Educate your friends on anti-racism!
-Support the BIPOC community and creators!
-Stand up for equality in your community!
-[this splash text is now available]
+[this splash text is now available and modified]
 Contains simulated goats!
 Home-made!
 There's <<a cat on ,my keyboard!~
@@ -447,3 +441,5 @@ Place hanging sign here
 Joule is neat too! 
 Made by Notch ! 
 Modded by Xgui4
+AmogOS approved!
+C# > Java

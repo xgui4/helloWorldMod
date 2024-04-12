@@ -7,6 +7,8 @@
     "hello_world:nether_sapphire_ore",
     "hello_world:end_stone_sapphire_ore",
     "hello_world:sound_block",
-    "hello_world:java_block"
+    "hello_world:java_block",
+    "hello_world:radium_block",
+    "hello_world:radium_ore_block"
   ]
 }

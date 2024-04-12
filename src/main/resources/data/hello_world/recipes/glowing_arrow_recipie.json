@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category" : "misc",
+  "pattern": [
+    "   ",
+    "#!#",
+    "   "
+  ],
+  "key": {
+    "#" : {
+      "item": "hello_world:sapphire"
+    }
+  },
+  "key": {
+    "!" : {
+      "item": "minecraft:arrow"
+    }
+  },
+  "result": {
+    "item" : "minecraft:spectral_arrow"
+  }
+}
