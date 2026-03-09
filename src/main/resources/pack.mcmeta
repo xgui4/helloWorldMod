@@ -1,6 +1,6 @@
 {
-    "pack":  {
-        "pack_format": 15,
-        "description": "Ressources supplémentaire pour le mod \"The Hello World Mod\"."
+    "pack": {
+        "description": "hello_world resources",
+        "pack_format": 15
     }
 }
